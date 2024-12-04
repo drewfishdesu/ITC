@@ -26,7 +26,7 @@ body {
     padding: 20px;
     width: 90%;
     max-width: 500px; /* Increase max width for better visibility on larger screens */
-    height: auto; /* Allow container height to grow based on content */
+    max-height: 500px;
     overflow-y: auto;
     overflow-x: hidden;
     opacity: 0;
