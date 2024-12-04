@@ -7,19 +7,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0px;
-  backdrop-filter: blur(10px); /* Subtle blur for the entire background */
+  margin: 0;
   padding: 10px; /* Added padding for better display on small devices */
-}
-
-/* Fade In Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  box-sizing: border-box; /* Ensure padding doesn't affect layout */
 }
 
 /* Box Container */
@@ -35,8 +25,8 @@ body {
   text-align: center;
   animation: fadeUp 1s ease-out forwards; /* Apply fadeUp animation */
   margin: 0 20px;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
-
 
 /* Heading */
 h1 {
@@ -82,10 +72,9 @@ a:hover {
   transform: translateY(-2px); /* Slight lift on hover */
 }
 
-/* Responsive Styling */
 /* Responsive Design for larger mobile screens (min-width: 720px) */
 @media (min-width: 720px) {
-  .container {
+  .box {
       width: 80%; /* Adjust width for better fit on larger screens */
       padding: 40px; /* Increased padding for spacious layout */
   }
