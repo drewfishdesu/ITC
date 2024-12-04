@@ -109,8 +109,7 @@ button:hover {
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .container {
-        width: 100%; /* Full width for small screens */
-        max-width: 100%; /* Remove max-width limitation */
+        width: 90%; /* Full width for small screens */
         padding: 10px;
     }
 
