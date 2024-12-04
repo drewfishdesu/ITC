@@ -30,19 +30,19 @@ body {
 
 /* Container Styles */
 .container {
-    background: rgba(255, 255, 255, 0.6); /* Semi-transparent white background */
-    border-radius: 10px;                 /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding: 20px;                       /* Padding inside the container */
-    max-width: 500px;
+    background: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    padding: 20px;
+    max-width: 380px; /* Smaller width */
     width: 100%;
-    backdrop-filter: blur(10px);         /* Apply background blur for the frosted effect */
-    border: 1px solid rgba(255, 255, 255, 0.4); /* Light border for a glassy appearance */
-    
-    /* Add these styles to make the div smaller and scrollable */
-    height: 700px; /* Limit the height of the div */
-    overflow-y: auto; /* Enable vertical scrolling if content overflows */
-    overflow-x: hidden; /* Disable horizontal scrolling (optional) */
+    backdrop-filter: blur(15px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Glassy border */
+    height: 600px; /* Smaller height */
+    overflow-y: auto; /* Vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
     
 }
 
