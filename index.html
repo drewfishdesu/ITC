@@ -1,59 +1,26 @@
 <!DOCTYPE html>
-<html>
-    <header>
-        <h1>Welcome to my Web Page.</h1>
-    </header>
-    <body>  
-            <!-- Dividers and Labels -->
-            <div>
-                <label>This is a label 1.</label>
-            </div>
-            <aside>
-                <label>This is label 2.</label>
-            </aside>
-            
-            <br>
-
-            <p>This is paragraph 1.</p>
-            <p>This is paragraph 2.</p>
-
-            <!-- Input tags -->
-            <label for = "lname">Last Name</label>
-                <input type = "text" id = "lname"></input>
-            <label for ="fname">First Name</label>
-                <input type = "text" id = "fname"></input>
-                <br>
-            <label for = "bpay">Basic Pay</label>
-                <input type = "number" id = "bpay" value = "0.00"></input>
-                <br>
-                <br>
-            <label for = "working">Working</label>
-                <!-- Pre-ticks the checkbox -->
-                <!-- Prohibits editing -->
-                <input type = "checkbox" id = "working" checked disabled name = "working"></input>
-                <br>
-                <br>
-            <div class = "gender">
-                <label>Gender</label>
-                <br>
-                    <input type = "radio" id = "Female" name = "gender" value = "Female"></input>
-                    <label for = "Female">Female</label>
-                    <input type = "radio" id = "Male" name = "gender" value = "Male"></input>
-                    <label for ="Male">Male</label>
-                    <div class = "spacer"></div>
-            </div>
-
-            <!-- Select Tags -->
-            <label for = "ylevel">Year Level</label>
-            <select name = "ylevel" id = "level">
-                <option value = "1">1</option>
-                <option value = "2">2</option>
-                <option value = "3">3</option>
-                <option value = "4">4</option>
-            </select>
-
-    </body>
-    <footer>
-        <h3>This is a footer.</h3>
-    </footer>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Andrew's Website for ITC</title>
+    <link rel="stylesheet" href="homepage.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Hello!</h1>
+        <div class="box">
+            <p>Select a webpage from the list below:</p>
+            <nav>
+                <a href="Calculators (Assignment 1-4)/calculator.html">Unit Converters</a>
+                <a href="Calculators (Assignment 1-4)/calculator2.html">Income Tax Calculator</a>
+                <a href="Calculators (Assignment 1-4)/calculator3.html">Factorial, Sum, Average Calculator</a>
+                <a href="Calculators (Assignment 1-4)/calculator4.html">Simple Payroll with CSS</a>
+            </nav>
+        </div>
+    </div>
+</body>
 </html>
