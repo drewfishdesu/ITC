@@ -83,30 +83,19 @@ a:hover {
 }
 
 /* Responsive Styling */
-@media (max-width: 1079px) {
-  body {
-    padding: 10px; /* Added padding for better spacing on small screens */
-  }
-
-  .box {
-    width: 100%; /* Full width for mobile */
-    max-width: none; /* Remove max-width constraint */
-    padding: 15px; /* Reduced padding for smaller devices */
-    margin: 0 10px; /* Adjusted margin for better fit */
+/* Responsive Design for larger mobile screens (min-width: 720px) */
+@media (min-width: 720px) {
+  .container {
+      width: 80%; /* Adjust width for better fit on larger screens */
+      padding: 40px; /* Increased padding for spacious layout */
   }
 
   h1 {
-    font-size: 1.8rem; /* Smaller font size for the heading */
+      font-size: 36px; /* Larger font size for heading */
   }
 
-  nav {
-    flex-direction: column; /* Stack buttons vertically */
-    gap: 15px; /* Add extra space between buttons for better readability */
-  }
-
-  a {
-    font-size: 0.9rem; /* Adjust button font size */
-    padding: 8px 15px; /* Reduced button padding for better fit */
+  input[type="text"], input[type="number"] {
+      font-size: 20px; /* Larger font size for inputs */
   }
 }
 
