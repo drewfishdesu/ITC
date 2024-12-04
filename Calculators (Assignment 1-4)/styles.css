@@ -26,8 +26,8 @@ body {
     padding: 20px;
     width: 90%;
     max-width: 500px; /* Increase max width for better visibility on larger screens */
-    max-height: 500px;
-    overflow-y: auto;
+    max-height: 80vh; /* Adjust max-height to 80vh for better responsiveness */
+    overflow-y: auto; /* Ensure scrolling if content overflows */
     overflow-x: hidden;
     opacity: 0;
     animation: fadeUp 1s ease-out forwards;
@@ -109,8 +109,9 @@ button:hover {
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .container {
-        width: 90%; /* Full width for small screens */
+        width: 90%;
         padding: 10px;
+        max-height: 80vh; /* Ensure proper container height on smaller screens */
     }
 
     h1 {
@@ -143,5 +144,6 @@ button:hover {
 
     .container {
         padding: 15px; /* Adjust padding for very small screens */
+        max-height: 80vh; /* Adjust max height to prevent cutting off */
     }
 }
