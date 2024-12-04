@@ -83,7 +83,7 @@ a:hover {
 }
 
 /* Responsive Styling */
-@media (max-width: 600px) {
+@media (max-width: 1079px) {
   body {
     padding: 10px; /* Added padding for better spacing on small screens */
   }
