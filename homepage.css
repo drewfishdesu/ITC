@@ -34,13 +34,17 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
   padding: 20px;
-  max-width: 380px; /* Smaller width */
+  max-width: 280px; /* Smaller width */
   width: 100%;
-  backdrop-filter: blur(15px); /* Frosted glass effect */
-  border: 1px solid rgba(255, 255, 255, 0.4); /* Glassy border */
-  height: 270px; /* Smaller height */
+  height: 300px; /* Fixed height */
   overflow-y: auto; /* Vertical scrolling */
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  word-wrap: break-word; /* Handle long words */
+  word-break: break-word; /* Handle word breaks */
+  overflow-wrap: break-word; /* Additional compatibility for word breaking */
+  white-space: normal; /* Ensure text wraps properly */
+  backdrop-filter: blur(15px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Glassy border */
   opacity: 0;
   animation: fadeUp 1s ease-out forwards;
 }
