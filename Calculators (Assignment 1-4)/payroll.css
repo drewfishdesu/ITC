@@ -5,11 +5,11 @@ body {
     color: #333;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
-    backdrop-filter: blur(10px); /* Subtle blur for the entire background */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Header style */
@@ -21,18 +21,19 @@ h1 {
 /* Form section styling */
 #form-section {
     max-width: 500px;
-    width: 100%;  /* Allow form to use full width on small screens */
-    margin: 0 auto;  /* Centers the form */
+    width: 100%;
+    margin: 20px auto; /* Adds spacing for better UI */
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Payroll list section styling */
 #payroll-list {
-    max-width: 850px;
-    width: 100%;  /* Allow payroll list to use full width on small screens */
-    margin: 0 auto;  /* Centers the form */
+    max-width: 880px;
+    width: 100%;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -47,12 +48,10 @@ label {
     color: #333;
 }
 
-/* Style for input fields */
 input[type="text"], input[type="number"] {
     width: calc(100% - 16px); /* Ensures full width with margins considered */
     padding: 8px;
     margin-bottom: 15px;
-    margin-right: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
@@ -79,8 +78,10 @@ button:hover {
 table {
     width: 100%;
     margin-top: 20px;
-    border-radius: 10px; /* Rounds the corners of the table */
-    border-collapse: collapse; /* Ensures the rounded corners are visible */
+    border-radius: 10px;
+    border-collapse: collapse;
+    border-spacing: 0; /* Fixes spacing issues */
+    overflow: hidden; /* Hides any overflow due to rounded corners */
 }
 
 table th, table td {
@@ -95,7 +96,15 @@ table th {
 }
 
 table tfoot tr th {
-  text-align: right;
+    text-align: right;
+}
+
+/* Make table scrollable on smaller screens */
+#payrollTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap; /* Prevent table cells from wrapping */
+    margin-top: 20px;
 }
 
 /* Style for delete button inside table */
@@ -112,37 +121,45 @@ table button:hover {
     background-color: #e60000;
 }
 
+/* General page scrolling improvements */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow-y: auto;
+    padding-bottom: 50px; /* Add padding at the bottom for better spacing */
+}
+
 /* Mobile-friendly adjustments */
 @media (max-width: 768px) {
-    /* Adjust form and payroll list to be full width */
     #form-section, #payroll-list {
         padding: 15px;
-        width: 90%; /* Use 90% width on smaller screens */
-        max-width: none; /* Remove max-width limitation */
+        width: 90%;
+        max-width: none;
     }
 
-    /* Adjust font size for headings */
     h1 {
-        font-size: 24px; /* Smaller heading for mobile */
+        font-size: 24px;
     }
 
-    /* Adjust input fields */
     input[type="text"], input[type="number"] {
-        font-size: 14px; /* Smaller font size */
-        padding: 10px; /* Larger padding for easier input */
+        font-size: 14px;
+        padding: 10px;
     }
 
-    /* Button styling adjustments */
     button {
-        font-size: 14px; /* Smaller font size for buttons */
-        padding: 12px 24px; /* Larger padding for easier tapping */
-        margin-right: 0; /* Remove margin on right */
-        width: 100%; /* Make button full width */
-        margin-bottom: 10px; /* Add space between buttons */
+        font-size: 14px;
+        padding: 12px 24px;
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
-    /* Adjust table styling */
     table th, table td {
-        padding: 6px; /* Less padding for table cells */
+        padding: 6px;
+    }
+
+    #payrollTable {
+        margin: 0 auto; /* Center the scrollable table */
     }
 }
