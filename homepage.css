@@ -6,16 +6,17 @@
 
 /* General Styles */
 body {
-    font-family: 'Funnel Sans', sans-serif;
-    background: linear-gradient(to bottom right, rgba(240, 248, 255, 0.8), rgba(195, 155, 255, 0.8)); /* Soft gradient background */
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    overflow: hidden;
-    backdrop-filter: blur(10px); /* Subtle blur for the entire background */
+  font-family: 'Funnel Sans', sans-serif;
+  background: linear-gradient(to bottom right, rgba(240, 248, 255, 0.8), rgba(195, 155, 255, 0.8)); /* Soft gradient background */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px; /* Added padding for better spacing on small screens */
+  overflow: auto; /* Allow scrolling on smaller devices */
+  backdrop-filter: blur(10px); /* Subtle blur for the entire background */
 }
 
 /* Fade In Animation */
@@ -34,10 +35,10 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
   padding: 20px;
-  max-width: 280px; /* Smaller width */
-  width: 100%;
-  height: 300px; /* Fixed height */
-  overflow-y: auto; /* Vertical scrolling */
+  max-width: 380px; /* Dynamic max width for better scaling */
+  width: 100%; /* Full width for mobile */
+  max-height: 90vh; /* Limit box height to prevent overflow */
+  overflow-y: auto; /* Enable vertical scrolling for content */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   word-wrap: break-word; /* Handle long words */
   word-break: break-word; /* Handle word breaks */
@@ -47,14 +48,14 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.4); /* Glassy border */
   opacity: 0;
   animation: fadeUp 1s ease-out forwards;
+  margin: 10px; /* Add margin for better spacing */
 }
-
 
 /* Heading */
 h1 {
   margin-bottom: 20px;
   animation: fadeUp 1s ease-out forwards;
-  font-size: 2rem; /* Adjusted font size for mobile */
+  font-size: 1.8rem; /* Adjusted font size for mobile */
   color: #333;
   text-align: left; /* Align heading text to the left */
 }
@@ -64,21 +65,22 @@ h1 {
   margin-bottom: 20px;
   font-size: 1rem; /* Slightly smaller for mobile */
   color: #555;
+  line-height: 1.5; /* Improve readability */
 }
 
 /* Navigation (Button Row) */
 nav {
   display: flex;
-  text-decoration: none;
   flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
   justify-content: center; /* Align buttons in the center */
   gap: 10px;
+  margin-top: 10px; /* Add spacing above the buttons */
 }
 
 /* Button Styles */
 a {
   padding: 10px 20px; /* Adjusted padding for smaller screens */
-  font-size: 1rem; /* Smaller font size for better fit */
+  font-size: 0.9rem; /* Slightly smaller font size */
   text-decoration: none;
   background: rgba(255, 255, 255, 0.87); /* Transparent white for frosted look */
   color: #333; /* Darker text color for contrast */
@@ -86,6 +88,8 @@ a {
   cursor: pointer; /* Pointer cursor for interactivity */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
   backdrop-filter: blur(5px); /* Frosted glass effect */
+  text-align: left; /* Center text inside buttons */
+  width: auto; /* Ensure buttons adjust width dynamically */
 }
 
 /* Hover Effects for Buttons */
@@ -95,20 +99,19 @@ a:hover {
 }
 
 /* Responsive Styling */
-@media (max-width: 1079px) {
+@media (max-width: 768px) {
   body {
     padding: 10px; /* Added padding for better spacing on small screens */
   }
 
   .box {
-    width: 100%; /* Full width for mobile */
-    max-width: 380px; /* Remove max-width constraint */
-    padding: 20px; /* Reduced padding for smaller devices */
-    margin: 10px; /* Adjusted margin for better fit */
+    max-width: 100%; /* Allow full width for smaller screens */
+    max-height: 80vh; /* Ensure it doesn't overflow on small devices */
+    padding: 15px; /* Adjust padding for smaller devices */
   }
 
   h1 {
-    font-size: 1.8rem; /* Smaller font size for the heading */
+    font-size: 1.5rem; /* Reduce font size for better fit */
   }
 
   nav {
@@ -117,7 +120,7 @@ a:hover {
   }
 
   a {
-    font-size: 0.9rem; /* Adjust button font size */
+    font-size: 0.85rem; /* Adjust button font size */
     padding: 8px 15px; /* Reduced button padding for better fit */
   }
 }
