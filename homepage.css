@@ -102,8 +102,8 @@ a:hover {
 
   .box {
     width: 100%; /* Full width for mobile */
-    max-width: none; /* Remove max-width constraint */
-    padding: 15px; /* Reduced padding for smaller devices */
+    max-width: 380px; /* Remove max-width constraint */
+    padding: 20px; /* Reduced padding for smaller devices */
     margin: 10px; /* Adjusted margin for better fit */
   }
 
