@@ -35,20 +35,20 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
   padding: 20px;
-  max-width: 380px; /* Dynamic max width for better scaling */
+  max-width: 380px; /* Limit box width for better scaling */
   width: 100%; /* Full width for mobile */
-  max-height: 90vh; /* Limit box height to prevent overflow */
-  overflow-y: auto; /* Enable vertical scrolling for content */
+  max-height: 90vh; /* Prevent overflow */
+  overflow-y: auto; /* Enable vertical scrolling */
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  word-wrap: break-word; /* Handle long words */
-  word-break: break-word; /* Handle word breaks */
+  margin: 10px auto; /* Center the box on mobile (horizontal auto) */
+  word-wrap: break-word;
+  word-break: break-word;
   overflow-wrap: break-word; /* Additional compatibility for word breaking */
   white-space: normal; /* Ensure text wraps properly */
   backdrop-filter: blur(15px); /* Frosted glass effect */
   border: 1px solid rgba(255, 255, 255, 0.4); /* Glassy border */
   opacity: 0;
   animation: fadeUp 1s ease-out forwards;
-  margin: 10px; /* Add margin for better spacing */
 }
 
 /* Heading */
